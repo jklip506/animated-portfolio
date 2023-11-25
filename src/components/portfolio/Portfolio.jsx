@@ -1,43 +1,75 @@
-import React from "react";
+import React, { useRef } from "react";
 import "./portfolio.scss";
+import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 
 const items = [
   {
     id: 1,
     title: "Ecommerce",
-    img: "https://images.pexels.com/photos/19031635/pexels-photo-19031635/free-photo-of-a-window-with-a-reflection-of-trees-and-water.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load",
+    img: "/ecommerce1.png",
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat magnam dolorem.",
+    url: "https://ecommerce-next-js-sanity.vercel.app/"
   },
 
   {
     id: 2,
     title: "IMDb Clone",
-    img: "https://images.pexels.com/photos/17151144/pexels-photo-17151144/free-photo-of-a-houseplant-near-the-window-overlooking-the-trees.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load",
+    img: "/imdb1.png",
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat magnam dolorem.",
-  },
-
-  {
-    id: 3,
-    title: "Music App",
-    img: "https://images.pexels.com/photos/18990021/pexels-photo-18990021/free-photo-of-couple.png?auto=compress&cs=tinysrgb&w=1600&lazy=load",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat magnam dolorem.",
-  },
-
-  {
-    id: 4,
-    title: "Admin Dashboard",
-    img: "https://images.pexels.com/photos/13703327/pexels-photo-13703327.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat magnam dolorem.",
+    url: "https://imdb-clone-nextjs-eight.vercel.app/"
   },
 ];
 
 const Single = ({ item }) => {
-  return <section>{item.title}</section>;
+  const ref = useRef();
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    // offset: ["start start", "end start"],
+  });
+
+  const y = useTransform(scrollYProgress, [0, 1], [-300, 300]);
+
+  const onClick = (url) => {
+    if(url) {
+      window.open(url, "_blank")
+    }
+  };
+
+  return (
+    <section>
+      <div className="container">
+        <div className="wrapper">
+          <div className="imageContainer" ref={ref}>
+            <img src={item.img} alt="" />
+          </div>
+          <motion.div className="textContainer" style={{y}}>
+            <h2>{item.title}</h2>
+            <p>{item.desc}</p>
+            <button onClick={() => onClick(item.url)}>See Demo</button>
+          </motion.div>
+        </div>
+      </div>
+    </section>
+  );
 };
 
 const Portfolio = () => {
+  const ref = useRef();
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["end end", "start start"],
+  });
+  const scaleX = useSpring(scrollYProgress, {
+    stiffness: 100,
+    damping: 30,
+  });
+
   return (
-    <div className="portfolio">
+    <div className="portfolio" ref={ref}>
+      <div className="progress">
+        <h1>Recent Works</h1>
+        <motion.div style={{ scaleX }} className="progressBar"></motion.div>
+      </div>
       {items.map((item) => {
         return <Single key={item.id} item={item} />;
       })}
