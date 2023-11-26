@@ -1,6 +1,5 @@
-import React, { useRef } from "react";
+import { useRef } from "react";
 import "./services.scss";
-
 import { motion, useInView } from "framer-motion";
 
 const variants = {
@@ -30,14 +29,15 @@ const Services = () => {
       className="services"
       variants={variants}
       initial="initial"
+      // animate="animate"
       // whileInView="animate"
       ref={ref}
-      animate={isInView && "animate"}
+      animate={"animate"}
     >
       <motion.div className="textContainer" variants={variants}>
         <p>
-          I look to help drive innovation through translating challenges
-          <br /> into actionable solutions
+          I focus on helping your brand grow
+          <br /> and move forward
         </p>
         <hr />
       </motion.div>
@@ -52,7 +52,6 @@ const Services = () => {
           <h1>
             <motion.b whileHover={{color:"orange"}}>For Your</motion.b> Business.
           </h1>
-          <button>WHAT I DO?</button>
         </div>
       </motion.div>
       <motion.div className="listContainer" variants={variants}>
@@ -62,10 +61,10 @@ const Services = () => {
         >
           <h2>Branding</h2>
           <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-            Dignissimos harum molestiae tempora, ad dicta, nesciunt nobis
-            molestias dolores itaque nisi quasi quod laudantium corrupti
-            accusamus non! Nostrum, eos. Repudiandae, aliquam?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
+            libero enim nisi aliquam consectetur expedita magni eius ex corrupti
+            animi! Ad nam pariatur assumenda quae mollitia libero repellat
+            explicabo maiores?
           </p>
           <hr />
         </motion.div>
@@ -75,10 +74,10 @@ const Services = () => {
         >
           <h2>Branding</h2>
           <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-            Dignissimos harum molestiae tempora, ad dicta, nesciunt nobis
-            molestias dolores itaque nisi quasi quod laudantium corrupti
-            accusamus non! Nostrum, eos. Repudiandae, aliquam?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
+            libero enim nisi aliquam consectetur expedita magni eius ex corrupti
+            animi! Ad nam pariatur assumenda quae mollitia libero repellat
+            explicabo maiores?
           </p>
           <hr />
         </motion.div>
@@ -88,10 +87,10 @@ const Services = () => {
         >
           <h2>Branding</h2>
           <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-            Dignissimos harum molestiae tempora, ad dicta, nesciunt nobis
-            molestias dolores itaque nisi quasi quod laudantium corrupti
-            accusamus non! Nostrum, eos. Repudiandae, aliquam?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
+            libero enim nisi aliquam consectetur expedita magni eius ex corrupti
+            animi! Ad nam pariatur assumenda quae mollitia libero repellat
+            explicabo maiores?
           </p>
           <hr />
         </motion.div>
@@ -101,10 +100,10 @@ const Services = () => {
         >
           <h2>Branding</h2>
           <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-            Dignissimos harum molestiae tempora, ad dicta, nesciunt nobis
-            molestias dolores itaque nisi quasi quod laudantium corrupti
-            accusamus non! Nostrum, eos. Repudiandae, aliquam?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
+            libero enim nisi aliquam consectetur expedita magni eius ex corrupti
+            animi! Ad nam pariatur assumenda quae mollitia libero repellat
+            explicabo maiores?
           </p>
           <hr />
         </motion.div>

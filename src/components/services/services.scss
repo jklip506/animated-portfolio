@@ -1,3 +1,5 @@
+@import "../../app.scss";
+
 .services {
     background: linear-gradient(180deg, #0c0c1d, #191952);
     height: 100%;
@@ -12,16 +14,32 @@
         align-items: center;
         gap: 20px;
 
+        @include mobile {
+            align-self: center;
+            text-align: center;
+            flex-direction: column;
+        }
+
         p{
             font-weight: 200;
             font-size: 20px;
             text-align: right;
+            
+            @include mobile {
+                // font-size: 15px;
+                // text-align: right;
+                display: none;
+            }
         }
 
         hr{
             width: 500px;
             border: none;
             border-top: 0.5px solid gray;
+
+            @include mobile {
+                width: 300px;
+            }
         }
     }
 
@@ -31,22 +49,41 @@
         flex-direction: column;
         align-items: center;
 
+        @include mobile {
+            width: 100%;
+        }
+
 
         .title{
             display: flex;
             gap: 50px;
             align-items: center;
 
+            @include mobile {
+                flex-direction: column;
+                text-align: center;
+                gap: 20px;
+            }
+
             img{
                 width: 300px;
                 height: 100px;
                 border-radius: 50px;
                 object-fit: cover;
+
+                @include mobile {
+                    width: 200px;
+                    height: 50px;
+                }
             }
 
             h1{
                 font-size: 96px;
                 font-weight: 100;
+
+                @include mobile {
+                    font-size: 36px;
+                }
             }
 
             button {
@@ -57,6 +94,12 @@
                 border: none;
                 font-size: 24px;
                 cursor: pointer;
+
+                @include mobile {
+                    font-size: 16px;
+                    width: 150px;
+                    height: 50px;
+                }
             }
         }
     }
@@ -67,13 +110,31 @@
         max-width: 1366px;
         margin: auto;
 
+        @include mobile {
+            flex-direction: column;
+            width: 100%;
+        }
+
         .box{
             padding: 50px;
             border: 0.5px solid gray;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-
+      
+            @include mobile {
+              border: none;
+              align-items: center;
+              gap: 20px;
+              padding: 10px;
+            }
+      
+            p {
+              @include mobile {
+                display: none;
+              }
+            }
+      
             hr {
                 background-color: orange;
                 border: none;
