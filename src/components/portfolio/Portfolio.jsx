@@ -8,7 +8,7 @@ const items = [
     title: "Ecommerce",
     img: "/ecommerce1.png",
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat magnam dolorem.",
-    url: "https://ecommerce-next-js-sanity.vercel.app/"
+    url: "https://ecommerce-next-js-sanity.vercel.app/",
   },
 
   {
@@ -16,8 +16,9 @@ const items = [
     title: "IMDb Clone",
     img: "/imdb1.png",
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat magnam dolorem.",
-    url: "https://imdb-clone-nextjs-eight.vercel.app/"
+    url: "https://imdb-clone-nextjs-eight.vercel.app/",
   },
+  
 ];
 
 const Single = ({ item }) => {
@@ -30,8 +31,8 @@ const Single = ({ item }) => {
   const y = useTransform(scrollYProgress, [0, 1], [-300, 300]);
 
   const onClick = (url) => {
-    if(url) {
-      window.open(url, "_blank")
+    if (url) {
+      window.open(url, "_blank");
     }
   };
 
@@ -42,7 +43,7 @@ const Single = ({ item }) => {
           <div className="imageContainer" ref={ref}>
             <img src={item.img} alt="" />
           </div>
-          <motion.div className="textContainer" style={{y}}>
+          <motion.div className="textContainer" style={{ y }}>
             <h2>{item.title}</h2>
             <p>{item.desc}</p>
             <button onClick={() => onClick(item.url)}>See Demo</button>
