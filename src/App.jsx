@@ -21,9 +21,9 @@ const App = () => {
         <Navbar />
         <Hero portfolioRef={portfolioRef} contactRef={contactRef}/>
       </section>
-      <section id="Services"><Parallax type="services"/></section>
+      <section id="About"><Parallax type="services"/></section>
       <section><Services /></section>
-      <section ref={portfolioRef} id="Portfolio"><Parallax type="portfolio"/></section>
+      <section id="Portfolio"><Parallax type="portfolio"/></section>
       <Portfolio />
       <section ref={contactRef} id="Contact"><Contact /></section>
     </div>
