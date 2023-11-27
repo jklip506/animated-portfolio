@@ -36,8 +36,8 @@ const Services = () => {
     >
       <motion.div className="textContainer" variants={variants}>
         <p>
-          I focus on helping your brand grow
-          <br /> and move forward
+          Determined to Drive Success
+          <br /> in Your Company
         </p>
         <hr />
       </motion.div>
@@ -45,12 +45,13 @@ const Services = () => {
         <div className="title">
           <img src="/people.webp" alt="" />
           <h1>
-            <motion.b whileHover={{color:"orange"}}>Unique</motion.b> Ideas
+            <motion.b whileHover={{ color: "orange" }}>Unique</motion.b> Ideas
           </h1>
         </div>
         <div className="title">
           <h1>
-            <motion.b whileHover={{color:"orange"}}>For Your</motion.b> Business.
+            <motion.b whileHover={{ color: "orange" }}>For Your</motion.b>{" "}
+            Business.
           </h1>
         </div>
       </motion.div>
@@ -59,12 +60,13 @@ const Services = () => {
           className="box"
           whileHover={{ background: "lightgray", color: "black" }}
         >
-          <h2>Branding</h2>
+          <h2>Determined Veteran</h2>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
-            libero enim nisi aliquam consectetur expedita magni eius ex corrupti
-            animi! Ad nam pariatur assumenda quae mollitia libero repellat
-            explicabo maiores?
+            As a veteran, I bring a unique blend of discipline, strategic
+            thinking, and resilience to the tech industry. My experience in the
+            Navy as an Intelligence Analyst has ingrained in me a meticulous
+            approach to problem-solving and a commitment to excellence in every
+            task.
           </p>
           <hr />
         </motion.div>
@@ -72,12 +74,13 @@ const Services = () => {
           className="box"
           whileHover={{ background: "lightgray", color: "black" }}
         >
-          <h2>Branding</h2>
+          <h2>Computer Science Major</h2>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
-            libero enim nisi aliquam consectetur expedita magni eius ex corrupti
-            animi! Ad nam pariatur assumenda quae mollitia libero repellat
-            explicabo maiores?
+            Pursuing a Bachelor's in Computer Science at St. Edward’s
+            University, I've honed my technical expertise, specializing in
+            full-stack development, cloud technologies, and software design.
+            This academic journey has been a cornerstone in developing my
+            professional skills and theoretical understanding.
           </p>
           <hr />
         </motion.div>
@@ -85,12 +88,14 @@ const Services = () => {
           className="box"
           whileHover={{ background: "lightgray", color: "black" }}
         >
-          <h2>Branding</h2>
+          <h2>Leadership and Collaboration Skills</h2>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
-            libero enim nisi aliquam consectetur expedita magni eius ex corrupti
-            animi! Ad nam pariatur assumenda quae mollitia libero repellat
-            explicabo maiores?
+            With a proven track record in leadership, I've effectively managed
+            cross-functional projects using Agile methodologies and led
+            initiatives with significant impacts. My experience as a software
+            engineering intern and an Intelligence Analyst in the Navy
+            highlights my ability to lead and collaborate in diverse team
+            settings.
           </p>
           <hr />
         </motion.div>
@@ -98,12 +103,13 @@ const Services = () => {
           className="box"
           whileHover={{ background: "lightgray", color: "black" }}
         >
-          <h2>Branding</h2>
+          <h2>Tech Adaptability & Versatility</h2>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
-            libero enim nisi aliquam consectetur expedita magni eius ex corrupti
-            animi! Ad nam pariatur assumenda quae mollitia libero repellat
-            explicabo maiores?
+            Demonstrating exceptional adaptability, I have excelled in various
+            tech roles - from developing scalable features at National
+            Instruments to analyzing critical intelligence in the Navy. My quick
+            learning and application of new technologies underscore my ability
+            to thrive in rapidly changing environments.
           </p>
           <hr />
         </motion.div>

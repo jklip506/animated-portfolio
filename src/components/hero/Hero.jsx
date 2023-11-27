@@ -39,7 +39,14 @@ const sliderVariants = {
     },
   };
 
-const Hero = () => {
+const Hero = ({ portfolioRef, contactRef }) => {
+
+  const scrollToRef = (ref) => {
+    if (ref && ref.current) {
+      ref.current.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <div className="hero">
       <div className="wrapper">
@@ -47,8 +54,8 @@ const Hero = () => {
           <motion.h2 variants={textVariants}>Jason Klipple</motion.h2>
           <motion.h1 variants={textVariants}>Web developer</motion.h1>
           <motion.div variants={textVariants} className="buttons">
-            <motion.button variants={textVariants}>See the Latest Works</motion.button>
-            <motion.button variants={textVariants}>Contact Me</motion.button>
+            <motion.button href={`#Porfolio`} variants={textVariants} onClick={() => scrollToRef(portfolioRef)}>See the Latest Works</motion.button>
+            <motion.button href={`#Contact`} variants={textVariants} onClick={() => scrollToRef(contactRef)} >Contact Me</motion.button>
           </motion.div>
           <motion.img variants={textVariants} animate="scrollButton" src="/scroll.png" alt="" />
         </motion.div>

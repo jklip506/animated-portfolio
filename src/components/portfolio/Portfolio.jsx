@@ -5,9 +5,9 @@ import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 const items = [
   {
     id: 1,
-    title: "Ecommerce",
+    title: "Electronics E-commerce",
     img: "/ecommerce1.png",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat magnam dolorem.",
+    desc: "Electronics e-commerce site built with Next.js, Sanity.io, and Stripe.",
     url: "https://ecommerce-next-js-sanity.vercel.app/",
   },
 
@@ -15,7 +15,7 @@ const items = [
     id: 2,
     title: "IMDb Clone",
     img: "/imdb1.png",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat magnam dolorem.",
+    desc: "IMDb clone built with Next.js, Tailwind and The Movie Database API.",
     url: "https://imdb-clone-nextjs-eight.vercel.app/",
   },
   
