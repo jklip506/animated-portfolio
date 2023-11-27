@@ -20,15 +20,29 @@
             flex-direction: column;
         }
 
+        @include tablet {
+            align-self: center;
+            text-align: center;
+            flex-direction: column;
+        }
+
         p{
             font-weight: 200;
             font-size: 20px;
             text-align: right;
             
             @include mobile {
-                // font-size: 15px;
-                // text-align: right;
+                padding-top: 20px;
+                font-size: 15px;
+                text-align: right;
                 display: none;
+            }
+
+            @include tablet {
+                padding-top: 20px;
+                font-size: 15px;
+                text-align: right;
+                justify-content: flex-end;
             }
         }
 
@@ -38,6 +52,10 @@
             border-top: 0.5px solid gray;
 
             @include mobile {
+                width: 300px;
+            }
+
+            @include tablet {
                 width: 300px;
             }
         }
@@ -53,6 +71,10 @@
             width: 100%;
         }
 
+        @include tablet {
+            width: 100%;
+        }
+
 
         .title{
             display: flex;
@@ -60,6 +82,12 @@
             align-items: center;
 
             @include mobile {
+                flex-direction: column;
+                text-align: center;
+                gap: 20px;
+            }
+
+            @include tablet {
                 flex-direction: column;
                 text-align: center;
                 gap: 20px;
@@ -75,6 +103,11 @@
                     width: 200px;
                     height: 50px;
                 }
+
+                @include tablet {
+                    width: 200px;
+                    height: 50px;
+                }
             }
 
             h1{
@@ -83,6 +116,10 @@
 
                 @include mobile {
                     font-size: 36px;
+                }
+
+                @include tablet {
+                    font-size: 50px;
                 }
             }
 
@@ -99,6 +136,14 @@
                     font-size: 16px;
                     width: 150px;
                     height: 50px;
+                    cursor: pointer;
+                }
+
+                @include tablet {
+                    font-size: 16px;
+                    width: 150px;
+                    height: 50px;
+                    cursor: pointer;
                 }
             }
         }
@@ -111,6 +156,11 @@
         margin: auto;
 
         @include mobile {
+            flex-direction: column;
+            width: 100%;
+        }
+
+        @include tablet {
             flex-direction: column;
             width: 100%;
         }
@@ -128,9 +178,20 @@
               gap: 20px;
               padding: 10px;
             }
+
+            @include tablet {
+                border: none;
+                align-items: center;
+                gap: 20px;
+                padding: 10px;
+              }
       
             p {
               @include mobile {
+                display: none;
+              }
+
+              @include tablet {
                 display: none;
               }
             }

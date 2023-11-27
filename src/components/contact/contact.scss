@@ -19,6 +19,12 @@
       flex-direction: column;
     }
 
+    @include tablet {
+      width: 100%;
+      padding: 10px;
+      flex-direction: column;
+    }
+
     .textContainer {
         flex: 1;
         display: flex;
@@ -26,6 +32,13 @@
         gap: 30px;
 
         @include mobile {
+          gap: 20px;
+          text-align: center;
+          align-items: center;
+          margin-top: 70px;
+        }
+
+        @include tablet {
           gap: 20px;
           text-align: center;
           align-items: center;
@@ -56,6 +69,11 @@
           padding: 50px;
           width: 100%;
         }
+
+        @include tablet {
+          padding: 50px;
+          width: 100%;
+        }
     
         .phoneSvg {
           stroke: orange;
@@ -80,6 +98,10 @@
             @include mobile {
               padding: 10px;
             }
+
+            @include tablet {
+              padding: 10px;
+            }
     
           }
     
@@ -92,6 +114,10 @@
             font-weight: 500;
 
             @include mobile {
+              padding: 10px;
+            }
+
+            @include tablet {
               padding: 10px;
             }
           }

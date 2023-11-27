@@ -88,7 +88,7 @@ const Services = () => {
           className="box"
           whileHover={{ background: "lightgray", color: "black" }}
         >
-          <h2>Leadership and Collaboration Skills</h2>
+          <h2>Leadership and Collaboration</h2>
           <p>
             With a proven track record in leadership, I've effectively managed
             cross-functional projects using Agile methodologies and led
